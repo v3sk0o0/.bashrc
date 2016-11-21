@@ -2,6 +2,9 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
+export GITAWAREPROMPT=~/.bash/git-aware-prompt
+source "${GITAWAREPROMPT}/main.sh"
+
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;
@@ -113,13 +116,14 @@ if ! shopt -oq posix; then
   fi
 fi
 
-parse_git_branch() {
-     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
-}
 
+export PS1="\[\033[1;38;5;14m\]\u\[\033[38;5;11m\]@\[$(tput sgr0)\]\[$(tput sgr0)\]\[\033[1;38;;5;10m\]\h:\[\033[1;38;5;25m\]\W \[$(tput sgr0)\]\\[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\$ "
 
+<<<<<<< Updated upstream
 
 export PS1="\[\033[1;38;5;14m\]\u\[\033[38;5;11m\]@\[$(tput sgr0)\]\[$(tput sgr0)\]\[\033[1;38;;5;10m\]\h:\[\033[1;38;5;25m\]\W\[$(tput sgr0)\]\[\033[38;5;153m\]$(parse_git_branch)\[$(tput sgr0)\]$ "
 
 
+=======
+>>>>>>> Stashed changes
 
