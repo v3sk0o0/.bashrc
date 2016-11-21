@@ -119,11 +119,3 @@ fi
 
 export PS1="\[\033[1;38;5;14m\]\u\[\033[38;5;11m\]@\[$(tput sgr0)\]\[$(tput sgr0)\]\[\033[1;38;;5;10m\]\h:\[\033[1;38;5;25m\]\W \[$(tput sgr0)\]\\[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\$ "
 
-<<<<<<< Updated upstream
-
-export PS1="\[\033[1;38;5;14m\]\u\[\033[38;5;11m\]@\[$(tput sgr0)\]\[$(tput sgr0)\]\[\033[1;38;;5;10m\]\h:\[\033[1;38;5;25m\]\W\[$(tput sgr0)\]\[\033[38;5;153m\]$(parse_git_branch)\[$(tput sgr0)\]$ "
-
-
-=======
->>>>>>> Stashed changes
-
